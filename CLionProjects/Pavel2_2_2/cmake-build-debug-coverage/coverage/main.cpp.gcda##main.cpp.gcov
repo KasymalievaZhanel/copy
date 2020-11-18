@@ -1,0 +1,340 @@
+        -:    0:Source:/home/zhanel/CLionProjects/Pavel2_2_2/main.cpp
+        -:    0:Graph:/home/zhanel/CLionProjects/Pavel2_2_2/cmake-build-debug-coverage/CMakeFiles/Pavel2_2_2.dir/main.cpp.gcno
+        -:    0:Data:/home/zhanel/CLionProjects/Pavel2_2_2/cmake-build-debug-coverage/CMakeFiles/Pavel2_2_2.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:using namespace std;
+        -:    3:#include <string>
+        -:    4:#include <stdint.h>
+        -:    5:#include <stdlib.h>
+        -:    6:#include <vector>
+        -:    7:
+        -:    8:
+        -:    9:using Date = struct {
+        -:   10:  uint16_t year; /* год */
+        -:   11:  uint16_t day; /* день месяца */
+        -:   12:  uint16_t mon; /* месяц, январь=1 */
+        -:   13:  int is_not_living;//1-live, 0-dead
+        -:   14:  bool is_allowed_to_be;//1-allowed
+        -:   15:};
+        -:   16:
+        -:   17:
+        1:   18:void func(string * person, int size) {
+        1:   19:  int k = 0;
+        1:   20:  int index = 0;
+        1:   21:  int max = 0;
+        2:   22:  vector <int> temp = {0};
+        1:   22-block  0
+        1:   22-block  1
+    $$$$$:   22-block  2
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+      169:   23:  for (int i = 0; i < size; ++i) {
+      169:   23-block  0
+      168:   23-block  1
+      168:   24:    int allow =(int)person[i][8] - 48;
+      168:   24-block  0
+        -:   25://    cout<<"MMM"<<!allow<<endl;
+      168:   26:    if(!allow) {
+      168:   26-block  0
+       84:   27:      ++k;
+       84:   27-block  0
+        -:   28:    }
+        -:   29:    else {
+       84:   30:      temp.push_back(k);
+       84:   30-block  0
+       84:   31:      ++index;
+        -:   32://      //cout<<"maxI "<<max<<endl;
+       84:   33:      k--;
+       84:   33-block  0
+        -:   34:      /*
+        -:   35:      if(k < 0)
+        -:   36:          //cout<<"ERROR"<<endl;
+        -:   37:          */
+        -:   38:    }
+     7241:   39:    for(int i = 0; i < temp.size(); ++i) {
+      168:   39-block  0
+     7241:   39-block  1
+     7073:   39-block  2
+     7073:   40:      if (temp[i] > max) {
+     7073:   40-block  0
+        3:   41:        max = temp[i];
+        3:   41-block  0
+        -:   42:      }
+        -:   43:    }
+        -:   44:  }
+        1:   45:  printf("%d",  max);
+        1:   45-block  0
+        -:   46:
+        1:   47:}
+        -:   48:
+        -:   49:
+      196:   50:void qsortRecursive(string *mas, int size) {
+        -:   51:  //Указатели в начало и в конец массива
+      196:   52:  int i = 0;
+      196:   53:  int j = size - 1;
+        -:   54: // //cout<<i<<" "<<j<<endl;
+        -:   55: /*  for(int i = 0; i < size; ++i) {
+        -:   56:    cout << mas[i] << endl;
+        -:   57:  }*/
+        -:   58:   //cout<<"size"<<size<<endl;
+        -:   59:
+        -:   60:  //Центральный элемент массива
+      392:   61:  string mid = mas[size / 2];
+      196:   61-block  0
+      196:   61-block  1
+    $$$$$:   61-block  2
+        -:   62:
+        -:   63:  //Делим массив
+      240:   64:   do {
+      240:   64-block  0
+        -:   65:    //Пробегаем элементы, ищем те, которые нужно перекинуть в другую часть
+        -:   66:    //В левой части массива пропускаем(оставляем на месте) элементы, которые меньше центрального
+      862:   67:    while(mas[i] < mid ) {
+      862:   67-block  0
+      426:   68:      if(i == size / 2) {
+      426:   68-block  0
+    #####:   69:        break;
+    %%%%%:   69-block  0
+        -:   70:      }
+      426:   71:      i++;
+      426:   71-block  0
+        -:   72:      //cout<<"i "<<i<<endl;
+        -:   73:    }// || (mas[i].dt == mid.dt && mas[i].is_living && mas[j].is_living != mid.is_living)
+        -:   74:    //В правой части пропускаем элементы, которые больше центрального
+        -:   75:
+      826:   76:    while (mas[j] > mid) {
+      826:   76-block  0
+      390:   77:      if(j == size / 2 ) {
+      390:   77-block  0
+    #####:   78:        break;
+    %%%%%:   78-block  0
+        -:   79:      }
+      390:   80:      j--;
+      390:   80-block  0
+        -:   81:      //cout<<"j "<<j<<endl;
+        -:   82:    }
+        -:   83:
+        -:   84:    //Меняем элементы местами
+      436:   85:    if (i <= j) {
+      436:   85-block  0
+        -:   86:
+      384:   87:      string tmp = mas[i];
+      384:   87-block  0
+    $$$$$:   87-block  1
+      384:   88:      mas[i]= mas[j];
+      384:   88-block  0
+      384:   89:      mas[j] = tmp;
+      384:   89-block  0
+      384:   90:      i++;
+      384:   91:      j--;
+      384:   91-block  0
+        -:   92:
+        -:   93:
+        -:   94:    }
+      436:   95:  }while(i <= j);
+      436:   95-block  0
+        -:   96:
+      196:   97:  if(j > 0) {
+      196:   97-block  0
+        -:   98:    //cout<<"левый кусок"<<endl;
+       75:   99:    qsortRecursive(mas, j + 1);
+       75:   99-block  0
+        -:  100:  }
+      196:  101:  if (i < size) {
+      196:  101-block  0
+        -:  102:
+      120:  103:    qsortRecursive(&mas[i], size - i);
+      120:  103-block  0
+        -:  104:
+        -:  105:  }
+      196:  106:}
+        -:  107:
+      284:  108:string To_String(uint32_t year, uint32_t month, uint32_t day){
+      284:  109:  string a = "";
+      284:  109-block  0
+    $$$$$:  109-block  1
+      446:  110:  for(int k = 1000; k >= 1; k /= 10){
+      446:  110-block  0
+      162:  110-block  1
+      446:  111:    if (year / k < 1){
+      446:  111-block  0
+      162:  112:      a += "0";
+      162:  112-block  0
+      162:  113:      continue;
+      162:  113-block  0
+        -:  114:    }
+      284:  115:    a += to_string(year);
+      284:  115-block  0
+      284:  115-block  1
+      284:  115-block  2
+    $$$$$:  115-block  3
+    $$$$$:  115-block  4
+      284:  116:    break;
+        -:  117:  }
+      284:  118:  if (month < 10) {
+      284:  118-block  0
+      204:  119:    a += "0";
+      204:  119-block  0
+      204:  120:    a += to_string(month);
+      204:  120-block  0
+      204:  120-block  1
+      204:  120-block  2
+    $$$$$:  120-block  3
+    $$$$$:  120-block  4
+        -:  121:  } else
+       80:  122:    a += to_string(month);
+       80:  122-block  0
+       80:  122-block  1
+       80:  122-block  2
+    $$$$$:  122-block  3
+    $$$$$:  122-block  4
+      284:  123:  if (day < 10) {
+      284:  123-block  0
+       91:  124:    a += "0";
+       91:  124-block  0
+       91:  125:    a += to_string(day);
+       91:  125-block  0
+       91:  125-block  1
+       91:  125-block  2
+    $$$$$:  125-block  3
+    $$$$$:  125-block  4
+        -:  126:  } else
+      193:  127:    a += to_string(day);
+      193:  127-block  0
+      193:  127-block  1
+      193:  127-block  2
+    $$$$$:  127-block  3
+    $$$$$:  127-block  4
+      284:  128:  return a;
+      284:  128-block  0
+      284:  128-block  1
+        -:  129:}
+        -:  130:
+        -:  131:
+        1:  132:int main() {
+        -:  133:  int N;
+        -:  134:
+        1:  135:  cin>> N;
+        -:  136:
+        -:  137:
+        1:  138:  Date person[2 * N];
+        1:  139:  int man = 0;
+      402:  140:  string person_all[2 * N];
+        1:  140-block  0
+      201:  140-block  1
+      200:  140-block  2
+      201:  140-block  3
+      200:  140-block  4
+    $$$$$:  140-block  5
+    $$$$$:  140-block  6
+    $$$$$:  140-block  7
+        1:  141:  int index = 0;
+      201:  142:  for(int i = 0; i < 2 * N; ++i) {
+        1:  142-block  0
+      201:  142-block  1
+      200:  142-block  2
+        -:  143:
+      200:  144:    if (i % 2 == 0) {
+      200:  144-block  0
+      100:  145:      man += 1;
+      100:  146:      person[i].is_not_living = 0;
+      100:  146-block  0
+        -:  147:    }
+        -:  148:    else {
+      100:  149:      person[i].is_not_living = 1;
+      100:  149-block  0
+        -:  150:    }
+      200:  151:    cin>>person[i].day>>person[i].mon>>person[i].year;
+      200:  151-block  0
+      200:  151-block  1
+      200:  151-block  2
+        -:  152:    //cout<<person[i].day<<person[i].mon<<person[i].year<<endl;
+        -:  153:  }
+        -:  154:
+      101:  155:  for (int i =0; i < 2 * N; i += 2) {
+        1:  155-block  0
+      101:  155-block  1
+      100:  155-block  2
+      100:  156:    person[i].year += 18;
+        -:  157:
+      100:  158:    std::string a = "";//to_string(person[i].year);
+      100:  158-block  0
+    $$$$$:  158-block  1
+    $$$$$:  158-block  2
+      100:  159:    a += To_String(person[i].year, person[i].mon, person[i].day);
+      100:  159-block  0
+      100:  159-block  1
+    $$$$$:  159-block  2
+    $$$$$:  159-block  3
+        -:  160: //   cout<<"AAAAA " <<a<<endl;
+        -:  161:
+      100:  162:    string dd = "";//to_string(person[i + 1].year);
+    $$$$$:  162-block  0
+    $$$$$:  162-block  1
+      100:  163:    dd += To_String(person[i + 1].year, person[i+1].mon, person[i].day - 1);
+      100:  163-block  0
+      100:  163-block  1
+    $$$$$:  163-block  2
+    $$$$$:  163-block  3
+        -:  164://    cout<<"DDDDD " <<dd<<endl;
+        -:  165:
+        -:  166:
+      100:  167:    if (a >= dd) {
+       16:  168:      continue;
+       16:  168-block  0
+        -:  169:    } else {
+        -:  170://      cout<<"Cout "<<endl;
+      168:  171:      string dd80 = "";
+       84:  171-block  0
+       84:  171-block  1
+    $$$$$:  171-block  2
+    $$$$$:  171-block  3
+       84:  172:      dd80 += To_String(person[i].year + 80 - 18, person[i + 1].mon, person[i + 1].day - 1);
+       84:  172-block  0
+       84:  172-block  1
+    $$$$$:  172-block  2
+    $$$$$:  172-block  3
+        -:  173: //     cout<<"DD800000DD " <<dd80<<endl;//to_string(person[i].year + 80 - 18);
+        -:  174:
+       84:  175:      dd = (dd > dd80 ? dd80 : dd);//конец участий, включительно
+       21:  175-block  0
+       63:  175-block  1
+       84:  175-block  2
+        -:  176://     person_all[index].dt = a;
+        -:  177:      //cout<<"ERROR"<<endl;
+       84:  178:      a += to_string(person[i].is_not_living);
+       84:  178-block  0
+       84:  178-block  1
+       84:  178-block  2
+    $$$$$:  178-block  3
+    $$$$$:  178-block  4
+       84:  179:      dd += to_string(person[i + 1].is_not_living);
+       84:  179-block  0
+       84:  179-block  1
+    $$$$$:  179-block  2
+    $$$$$:  179-block  3
+        -:  180:
+       84:  181:      person_all[index++] = a;
+       84:  182:      person_all[index++] = dd;
+       84:  182-block  0
+        -:  183:    }
+        -:  184:  }
+        -:  185:
+        -:  186:
+        -:  187:
+        1:  188: qsortRecursive(person_all, index);
+        1:  188-block  0
+        -:  189:// cout<<"ENDOF"<<endl;
+        -:  190:/* for(int i = 0; i < size; ++i) {
+        -:  191:   cout << person_all[i] << endl;
+        -:  192: }*/
+        1:  193:  func(person_all, index);
+        1:  193-block  0
+        -:  194:
+        -:  195:
+        2:  196:  return 0;
+        1:  196-block  0
+        1:  196-block  1
+        -:  197:}
+        -:  198:

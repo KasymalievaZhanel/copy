@@ -1,0 +1,3 @@
+/home/zhanel/CLionProjects/contest2_3_last/build/CMakeFiles/rebuild_cache.dir
+/home/zhanel/CLionProjects/contest2_3_last/build/CMakeFiles/edit_cache.dir
+/home/zhanel/CLionProjects/contest2_3_last/build/CMakeFiles/contest2_3_last.dir

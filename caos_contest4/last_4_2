@@ -1,0 +1,27 @@
+    .text
+    .global main
+
+main:
+
+    push  {r4,r5,r6,r7,r8,lr}
+    ldr   r4, .args
+    ldr   r5, .args+4
+.Loopbegin:
+    ldr   r0, [r4]
+    bl    fgets
+    cmp   r0, #0
+    beg   .LoopEnd 
+    cmp   r0, #48
+    blt   .Loopbegin
+    cmp   r0, #255
+    bgt   .Loopbegin
+    ldr   r1, [r5]
+    mov   r1, r5
+    bl    fputs
+.LoopEnd:
+    pop {r4,r5,r6,r7,r8,lr}
+    bx lr
+.args:
+    .word stdin
+    .word stdout
+

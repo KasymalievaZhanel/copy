@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdint.h>
+
+int main(int args, char* argv[]) {
+  for (int i = 1; i < args; ++i) {
+    int64_t lenth = 0;
+    for(int j = 2; argv[i][j] != '\0'; ++j) {
+        if (argv[i][j] != '0'){
+

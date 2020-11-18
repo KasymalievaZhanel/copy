@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/contest2_3_last.dir/main.c.o  -o contest2_3_last 

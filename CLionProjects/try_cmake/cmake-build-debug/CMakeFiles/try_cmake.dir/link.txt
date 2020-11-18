@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/try_cmake.dir/main.c.o  -o try_cmake 

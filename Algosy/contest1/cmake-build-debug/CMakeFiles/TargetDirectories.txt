@@ -1,0 +1,3 @@
+/home/zhanel/Algosy/contest1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zhanel/Algosy/contest1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zhanel/Algosy/contest1/cmake-build-debug/CMakeFiles/contest1.dir

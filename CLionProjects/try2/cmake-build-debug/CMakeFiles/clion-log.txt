@@ -1,0 +1,16 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -G "CodeBlocks - Unix Makefiles" /home/zhanel/CLionProjects/try2
+-- Configuring done
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    3.с
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: main
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

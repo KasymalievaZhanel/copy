@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Pavel2_5_4.dir/main.cpp.o  -o Pavel2_5_4 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zhanel/CLionProjects/Pavel2_5_4/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+stdint.h
+-
+

@@ -1,0 +1,7 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -G "CodeBlocks - Unix Makefiles" /home/zhanel/CLionProjects/try_cmake
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.17 or higher is required.  You are running version 3.16.3
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/zhanel/CLionProjects/try_cmake/cmake-build-debug/CMakeFiles/CMakeOutput.log".

@@ -1,0 +1,5 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/bin/gcc -G "CodeBlocks - Unix Makefiles" /home/zhanel/CLionProjects/contest
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.2", minimum required is "3.6") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zhanel/CLionProjects/contest/cmake-build-debug

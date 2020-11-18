@@ -1,0 +1,3 @@
+/home/zhanel/CLionProjects/CONTEST3_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zhanel/CLionProjects/CONTEST3_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zhanel/CLionProjects/CONTEST3_1/cmake-build-debug/CMakeFiles/CONTEST3_1.dir

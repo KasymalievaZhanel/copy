@@ -1,0 +1,3 @@
+/home/zhanel/CLionProjects/un/b/CMakeFiles/edit_cache.dir
+/home/zhanel/CLionProjects/un/b/CMakeFiles/rebuild_cache.dir
+/home/zhanel/CLionProjects/un/b/CMakeFiles/un.dir

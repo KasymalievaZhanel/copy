@@ -1,0 +1,1 @@
+/usr/bin/gcc -g   CMakeFiles/project_try_1.dir/main.c.o  -o project_try_1 

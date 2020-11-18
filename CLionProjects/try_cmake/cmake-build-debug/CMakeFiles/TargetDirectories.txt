@@ -1,0 +1,2 @@
+/home/zhanel/CLionProjects/try_cmake/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zhanel/CLionProjects/try_cmake/cmake-build-debug/CMakeFiles/edit_cache.dir
